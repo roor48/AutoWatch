@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Auto Watch</title>
-    </head>
-    <body>
-        <button id="start_btn">시작</button>
-        <script src="popup.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>링크 순차 접속</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="startButton">링크 순차 접속 시작</button>
+  <button id="skipButton">다음 링크 스킵</button>
+  <button id="stopButton">접속 종료</button>
+  <script src="popup.js"></script>
+</body>
 </html>

@@ -1,12 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Auto Watch",
-    "version": "1.0",
-    "permissions": ["scripting", "activeTab"],
-    "host_permissions": [
-        "https://canvas.donga.ac.kr/*"
-    ],
-    "action": {
-        "default_popup": "popup.html"
+  "name": "영상자동시청",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "영상자동시청",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://canvas.donga.ac.kr/*", 
+        "https://cmaker.donga.ac.kr/*"
+      ],
+      "js": ["content.js"]
     }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
